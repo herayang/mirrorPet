@@ -1006,24 +1006,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Hydra\\.nuget\\packages\\": {},
+    "C:\\Users\\Marcus\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Hydra\\source\\repos\\projectNotebook\\mirrorPet\\MirrorPet\\MirrorPet\\MirrorPet.iOS\\MirrorPet.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\Marcus\\Documents\\GitHub\\mirrorPet\\MirrorPet\\MirrorPet\\MirrorPet.iOS\\MirrorPet.iOS.csproj",
       "projectName": "MirrorPet.iOS",
-      "projectPath": "C:\\Users\\Hydra\\source\\repos\\projectNotebook\\mirrorPet\\MirrorPet\\MirrorPet\\MirrorPet.iOS\\MirrorPet.iOS.csproj",
-      "packagesPath": "C:\\Users\\Hydra\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Hydra\\source\\repos\\projectNotebook\\mirrorPet\\MirrorPet\\MirrorPet\\MirrorPet.iOS\\obj\\",
+      "projectPath": "C:\\Users\\Marcus\\Documents\\GitHub\\mirrorPet\\MirrorPet\\MirrorPet\\MirrorPet.iOS\\MirrorPet.iOS.csproj",
+      "packagesPath": "C:\\Users\\Marcus\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Marcus\\Documents\\GitHub\\mirrorPet\\MirrorPet\\MirrorPet\\MirrorPet.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Hydra\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Marcus\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -1037,8 +1037,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\Hydra\\source\\repos\\projectNotebook\\mirrorPet\\MirrorPet\\MirrorPet\\MirrorPet\\MirrorPet.csproj": {
-              "projectPath": "C:\\Users\\Hydra\\source\\repos\\projectNotebook\\mirrorPet\\MirrorPet\\MirrorPet\\MirrorPet\\MirrorPet.csproj"
+            "C:\\Users\\Marcus\\Documents\\GitHub\\mirrorPet\\MirrorPet\\MirrorPet\\MirrorPet\\MirrorPet.csproj": {
+              "projectPath": "C:\\Users\\Marcus\\Documents\\GitHub\\mirrorPet\\MirrorPet\\MirrorPet\\MirrorPet\\MirrorPet.csproj"
             }
           }
         }
