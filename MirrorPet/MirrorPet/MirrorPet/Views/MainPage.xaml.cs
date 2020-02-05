@@ -12,7 +12,7 @@ namespace MirrorPet.Views
 	{
 		public MainPage()
 		{
-			InitializeComponent();
+			//InitializeComponent();
 		}
 	}
 }

@@ -1,7 +1,7 @@
 package crc643f46942d9dd1fff9;
 
 
-public class ItemsViewAdapter
+public class ItemsViewAdapter_2
 	extends android.support.v7.widget.RecyclerView.Adapter
 	implements
 		mono.android.IGCUserPeer
@@ -16,15 +16,15 @@ public class ItemsViewAdapter
 			"n_getItemCount:()I:GetGetItemCountHandler\n" +
 			"n_getItemViewType:(I)I:GetGetItemViewType_IHandler\n" +
 			"";
-		mono.android.Runtime.register ("Xamarin.Forms.Platform.Android.ItemsViewAdapter, Xamarin.Forms.Platform.Android", ItemsViewAdapter.class, __md_methods);
+		mono.android.Runtime.register ("Xamarin.Forms.Platform.Android.ItemsViewAdapter`2, Xamarin.Forms.Platform.Android", ItemsViewAdapter_2.class, __md_methods);
 	}
 
 
-	public ItemsViewAdapter ()
+	public ItemsViewAdapter_2 ()
 	{
 		super ();
-		if (getClass () == ItemsViewAdapter.class)
-			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.ItemsViewAdapter, Xamarin.Forms.Platform.Android", "", this, new java.lang.Object[] {  });
+		if (getClass () == ItemsViewAdapter_2.class)
+			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.ItemsViewAdapter`2, Xamarin.Forms.Platform.Android", "", this, new java.lang.Object[] {  });
 	}
 
 
