@@ -26,7 +26,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.1.0.555618": {
+      "Xamarin.Forms/4.4.0.991537": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -154,7 +154,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Xamarin.Essentials": "1.1.0",
-          "Xamarin.Forms": "4.1.0.555618"
+          "Xamarin.Forms": "4.4.0.991537"
         },
         "compile": {
           "bin/placeholder/MirrorPet.dll": {}
@@ -189,7 +189,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.1.0.555618": {
+      "Xamarin.Forms/4.4.0.991537": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -317,7 +317,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Xamarin.Essentials": "1.1.0",
-          "Xamarin.Forms": "4.1.0.555618"
+          "Xamarin.Forms": "4.4.0.991537"
         },
         "compile": {
           "bin/placeholder/MirrorPet.dll": {}
@@ -352,7 +352,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.1.0.555618": {
+      "Xamarin.Forms/4.4.0.991537": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -480,7 +480,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Xamarin.Essentials": "1.1.0",
-          "Xamarin.Forms": "4.1.0.555618"
+          "Xamarin.Forms": "4.4.0.991537"
         },
         "compile": {
           "bin/placeholder/MirrorPet.dll": {}
@@ -515,7 +515,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.1.0.555618": {
+      "Xamarin.Forms/4.4.0.991537": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -643,7 +643,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Xamarin.Essentials": "1.1.0",
-          "Xamarin.Forms": "4.1.0.555618"
+          "Xamarin.Forms": "4.4.0.991537"
         },
         "compile": {
           "bin/placeholder/MirrorPet.dll": {}
@@ -746,10 +746,10 @@
         "xamarin.essentials.nuspec"
       ]
     },
-    "Xamarin.Forms/4.1.0.555618": {
-      "sha512": "eZHy/yCrKhu3WUI1oszz8Hvq8iC+wQyokEVkzlSmNJD6xa2pGLq5UjOgpXEWu7zKPaoZ5c70SrTv1BBZE+Je1A==",
+    "Xamarin.Forms/4.4.0.991537": {
+      "sha512": "ZoOvfinSUma4gbXe/0mp6Uk/NTliFLkOwV9qLe/TW2VwSlBEhoiok99gr4esZVU+RwCPEqnsgmtlWFSMNzn2iw==",
       "type": "package",
-      "path": "xamarin.forms/4.1.0.555618",
+      "path": "xamarin.forms/4.4.0.991537",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -962,33 +962,19 @@
         "lib/tizen40/Xamarin.Forms.Xaml.xml",
         "lib/uap10.0/Design/Xamarin.Forms.Core.Design.dll",
         "lib/uap10.0/Design/Xamarin.Forms.Xaml.Design.dll",
+        "lib/uap10.0/Properties/Xamarin.Forms.Platform.UAP.rd.xml",
         "lib/uap10.0/Xamarin.Forms.Core.dll",
         "lib/uap10.0/Xamarin.Forms.Core.pdb",
         "lib/uap10.0/Xamarin.Forms.Core.xml",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP.dll",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP.pdb",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP.pri",
-        "lib/uap10.0/Xamarin.Forms.Platform.UAP/AutoSuggestStyle.xbf",
-        "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsCheckBoxStyle.xbf",
-        "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsCommandBarStyle.xbf",
-        "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsEmbeddedPageWrapper.xbf",
-        "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsFlyout.xbf",
-        "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsProgressBarStyle.xbf",
-        "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsTextBoxStyle.xbf",
-        "lib/uap10.0/Xamarin.Forms.Platform.UAP/Items/ItemsViewStyles.xbf",
-        "lib/uap10.0/Xamarin.Forms.Platform.UAP/MasterDetailControlStyle.xbf",
-        "lib/uap10.0/Xamarin.Forms.Platform.UAP/PageControlStyle.xbf",
-        "lib/uap10.0/Xamarin.Forms.Platform.UAP/Properties/Xamarin.Forms.Platform.UAP.rd.xml",
-        "lib/uap10.0/Xamarin.Forms.Platform.UAP/Resources.xbf",
-        "lib/uap10.0/Xamarin.Forms.Platform.UAP/SliderStyle.xbf",
-        "lib/uap10.0/Xamarin.Forms.Platform.UAP/StepperControl.xbf",
-        "lib/uap10.0/Xamarin.Forms.Platform.UAP/TabbedPageStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/Xamarin.Forms.Platform.UAP.xr.xml",
         "lib/uap10.0/Xamarin.Forms.Platform.dll",
         "lib/uap10.0/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.4.1.0.555618.nupkg.sha512",
+        "xamarin.forms.4.4.0.991537.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     },
@@ -1002,28 +988,28 @@
     "Xamarin.iOS,Version=v1.0": [
       "MirrorPet >= 1.0.0",
       "Xamarin.Essentials >= 1.1.0",
-      "Xamarin.Forms >= 4.1.0.555618"
+      "Xamarin.Forms >= 4.4.0.991537"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Hydra\\.nuget\\packages\\": {},
+    "C:\\Users\\Marcus\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Hydra\\source\\repos\\projectNotebook\\mirrorPet\\MirrorPet\\MirrorPet\\MirrorPet.iOS\\MirrorPet.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\Marcus\\Documents\\GitHub\\mirrorPet\\MirrorPet\\MirrorPet\\MirrorPet.iOS\\MirrorPet.iOS.csproj",
       "projectName": "MirrorPet.iOS",
-      "projectPath": "C:\\Users\\Hydra\\source\\repos\\projectNotebook\\mirrorPet\\MirrorPet\\MirrorPet\\MirrorPet.iOS\\MirrorPet.iOS.csproj",
-      "packagesPath": "C:\\Users\\Hydra\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Hydra\\source\\repos\\projectNotebook\\mirrorPet\\MirrorPet\\MirrorPet\\MirrorPet.iOS\\obj\\",
+      "projectPath": "C:\\Users\\Marcus\\Documents\\GitHub\\mirrorPet\\MirrorPet\\MirrorPet\\MirrorPet.iOS\\MirrorPet.iOS.csproj",
+      "packagesPath": "C:\\Users\\Marcus\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Marcus\\Documents\\GitHub\\mirrorPet\\MirrorPet\\MirrorPet\\MirrorPet.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Hydra\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Marcus\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -1037,8 +1023,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\Hydra\\source\\repos\\projectNotebook\\mirrorPet\\MirrorPet\\MirrorPet\\MirrorPet\\MirrorPet.csproj": {
-              "projectPath": "C:\\Users\\Hydra\\source\\repos\\projectNotebook\\mirrorPet\\MirrorPet\\MirrorPet\\MirrorPet\\MirrorPet.csproj"
+            "C:\\Users\\Marcus\\Documents\\GitHub\\mirrorPet\\MirrorPet\\MirrorPet\\MirrorPet\\MirrorPet.csproj": {
+              "projectPath": "C:\\Users\\Marcus\\Documents\\GitHub\\mirrorPet\\MirrorPet\\MirrorPet\\MirrorPet\\MirrorPet.csproj"
             }
           }
         }
@@ -1053,7 +1039,7 @@
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[4.1.0.555618, )"
+            "version": "[4.4.0.991537, )"
           }
         }
       }

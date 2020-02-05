@@ -1,34 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
-            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-            mc:Ignorable="d"
-            xmlns:views="clr-namespace:MirrorPet.Views"
-            x:Class="MirrorPet.Views.MainPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Test2.MainPage">
 
-    <TabbedPage.Children>
-        <NavigationPage Title="Browse">
-            <NavigationPage.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="iOS" Value="tab_feed.png"/>
-                </OnPlatform>
-            </NavigationPage.Icon>
-            <x:Arguments>
-                <views:ItemsPage />
-            </x:Arguments>
-        </NavigationPage>
-        
-        <NavigationPage Title="About">
-            <NavigationPage.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="iOS" Value="tab_about.png"/>
-                </OnPlatform>
-            </NavigationPage.Icon>
-            <x:Arguments>
-                <views:AboutPage />
-            </x:Arguments>
-        </NavigationPage>
-    </TabbedPage.Children>
-    
-</TabbedPage>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0"
+              BackgroundColor="BlueViolet"
+        />
+
+        <Grid Grid.Row="1"
+              BackgroundColor="Beige"
+        />
+        <Entry Placeholder="Please enter the calories"
+               Grid.Row="1"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               MaxLength="4"
+         />
+
+        <Image Source="https://c7.uihere.com/files/269/82/487/sprite-animation-2d-computer-graphics-game-character-sprite.jpg" 
+              VerticalOptions="Center"
+              HorizontalOptions="Center"
+        />
+
+
+
+
+
+    </Grid>
+
+
+
+
+
+</ContentPage>

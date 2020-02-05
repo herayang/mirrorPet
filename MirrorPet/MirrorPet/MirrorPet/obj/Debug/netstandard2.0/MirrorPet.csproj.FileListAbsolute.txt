@@ -1,0 +1,15 @@
+C:\Users\Marcus\Documents\GitHub\mirrorPet\MirrorPet\MirrorPet\MirrorPet\bin\Debug\netstandard2.0\MirrorPet.deps.json
+C:\Users\Marcus\Documents\GitHub\mirrorPet\MirrorPet\MirrorPet\MirrorPet\bin\Debug\netstandard2.0\MirrorPet.dll
+C:\Users\Marcus\Documents\GitHub\mirrorPet\MirrorPet\MirrorPet\MirrorPet\bin\Debug\netstandard2.0\MirrorPet.pdb
+C:\Users\Marcus\Documents\GitHub\mirrorPet\MirrorPet\MirrorPet\MirrorPet\obj\Debug\netstandard2.0\MirrorPet.csprojAssemblyReference.cache
+C:\Users\Marcus\Documents\GitHub\mirrorPet\MirrorPet\MirrorPet\MirrorPet\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Marcus\Documents\GitHub\mirrorPet\MirrorPet\MirrorPet\MirrorPet\obj\Debug\netstandard2.0\Views\AboutPage.xaml.g.cs
+C:\Users\Marcus\Documents\GitHub\mirrorPet\MirrorPet\MirrorPet\MirrorPet\obj\Debug\netstandard2.0\Views\ItemDetailPage.xaml.g.cs
+C:\Users\Marcus\Documents\GitHub\mirrorPet\MirrorPet\MirrorPet\MirrorPet\obj\Debug\netstandard2.0\Views\ItemsPage.xaml.g.cs
+C:\Users\Marcus\Documents\GitHub\mirrorPet\MirrorPet\MirrorPet\MirrorPet\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+C:\Users\Marcus\Documents\GitHub\mirrorPet\MirrorPet\MirrorPet\MirrorPet\obj\Debug\netstandard2.0\Views\NewItemPage.xaml.g.cs
+C:\Users\Marcus\Documents\GitHub\mirrorPet\MirrorPet\MirrorPet\MirrorPet\obj\Debug\netstandard2.0\MirrorPet.AssemblyInfoInputs.cache
+C:\Users\Marcus\Documents\GitHub\mirrorPet\MirrorPet\MirrorPet\MirrorPet\obj\Debug\netstandard2.0\MirrorPet.AssemblyInfo.cs
+C:\Users\Marcus\Documents\GitHub\mirrorPet\MirrorPet\MirrorPet\MirrorPet\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Marcus\Documents\GitHub\mirrorPet\MirrorPet\MirrorPet\MirrorPet\obj\Debug\netstandard2.0\MirrorPet.dll
+C:\Users\Marcus\Documents\GitHub\mirrorPet\MirrorPet\MirrorPet\MirrorPet\obj\Debug\netstandard2.0\MirrorPet.pdb
