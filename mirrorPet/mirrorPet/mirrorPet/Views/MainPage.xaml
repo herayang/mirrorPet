@@ -21,6 +21,16 @@
                MaxLength="4"
          />
 
+        <ProgressBar x:Name="progressBar"
+               
+               WidthRequest="300"
+               HeightRequest="100"
+               VerticalOptions="Start"
+               HorizontalOptions="Center"
+               ProgressColor="BlueViolet"
+               Grid.Row="1"     
+         />
+
         <Image x:Name="HolkunImage"
             Source="Holdkun_Default.png" 
               VerticalOptions="Center"

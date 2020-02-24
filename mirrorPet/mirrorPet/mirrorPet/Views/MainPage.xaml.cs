@@ -17,5 +17,16 @@ namespace mirrorPet
 		{
 			InitializeComponent();
 		}
+
+		protected override async void OnAppearing()
+		{
+			base.OnAppearing();
+
+			var temp = CaloriesIntake.Text;
+			Double calInput = Convert.ToDouble(temp);
+			calInput /= 1000;
+			await progressBar.ProgressTo(0.8, 900, Easing.Linear);
+
+		}
 	}
 }
