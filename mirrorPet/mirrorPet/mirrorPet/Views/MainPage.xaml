@@ -19,6 +19,7 @@
                VerticalOptions="Center"
                HorizontalOptions="Center"
                MaxLength="4"
+               Keyboard="Numeric"
          />
 
         <ProgressBar x:Name="progressBar"
