@@ -11,22 +11,26 @@ namespace mirrorPet
 	// Learn more about making custom code visible in the Xamarin.Forms previewer
 	// by visiting https://aka.ms/xamarinforms-previewer
 	[DesignTimeVisible(false)]
-	public partial class MainPage : ContentPage
-	{
-		public MainPage()
-		{
-			InitializeComponent();
-		}
+    public partial class MainPage : ContentPage
+    {
+        double calorieCount;
+        public MainPage()
+        {
+            InitializeComponent();
+            calorieCount = 0;
+        }
 
-		protected override async void OnAppearing()
-		{
-			base.OnAppearing();
 
-			var temp = CaloriesIntake.Text;
-			Double calInput = Convert.ToDouble(temp);
-			calInput /= 1000;
-			await progressBar.ProgressTo(0.8, 900, Easing.Linear);
 
-		}
-	}
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            OnAppearing();
+            var temp = CaloriesIntake.Text;
+            Double calInput = Convert.ToDouble(temp);
+            calInput /= 1000;
+            calorieCount += calInput;
+            progressBar.ProgressTo(calorieCount, 900, Easing.Linear);
+            CaloriesIntake.Text = string.Empty;
+        }
+    }
 }

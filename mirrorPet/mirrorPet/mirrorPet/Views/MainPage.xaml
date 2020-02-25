@@ -15,11 +15,13 @@
         />
         <Entry x:Name = "CaloriesIntake"
                Placeholder="Please enter the calories"
+               HorizontalTextAlignment="Center"
                Grid.Row="1"
                VerticalOptions="Center"
                HorizontalOptions="Center"
                MaxLength="4"
                Keyboard="Numeric"
+               Completed="Button_Clicked"
          />
 
         <ProgressBar x:Name="progressBar"
