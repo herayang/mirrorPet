@@ -13,6 +13,7 @@ namespace mirrorPet
 	[DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
+        double calorieGoal = 2000;
         double calorieCount;
         public MainPage()
         {
@@ -27,10 +28,16 @@ namespace mirrorPet
             OnAppearing();
             var temp = CaloriesIntake.Text;
             Double calInput = Convert.ToDouble(temp);
-            calInput /= 1000;
+            calInput /= calorieGoal;
             calorieCount += calInput;
             progressBar.ProgressTo(calorieCount, 900, Easing.Linear);
             CaloriesIntake.Text = string.Empty;
+        }
+
+        private void SetGoal(object sender, EventArgs args)
+        {
+            OnAppearing();
+            calorieGoal = Convert.ToDouble(Goal.Text);
         }
     }
 }

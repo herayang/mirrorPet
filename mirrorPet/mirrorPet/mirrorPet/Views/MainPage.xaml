@@ -17,10 +17,11 @@
                Placeholder="Please enter the calories"
                HorizontalTextAlignment="Center"
                Grid.Row="1"
-               VerticalOptions="Center"
+               VerticalOptions="End"
                HorizontalOptions="Center"
                MaxLength="4"
                Keyboard="Numeric"
+               Margin="0,0,0,20"
                Completed="Button_Clicked"
          />
 
@@ -28,10 +29,23 @@
                
                WidthRequest="300"
                HeightRequest="100"
-               VerticalOptions="Start"
+               VerticalOptions="Center"
                HorizontalOptions="Center"
                ProgressColor="BlueViolet"
                Grid.Row="1"     
+         />
+
+        <Entry x:Name="Goal"
+               
+               Placeholder="Enter goal for calories"
+               HorizontalTextAlignment="Center"
+               VerticalOptions="Start"
+               HorizontalOptions="Center"
+               Keyboard="Numeric"
+               MaxLength="4"
+               Grid.Row="1"
+               Completed="SetGoal"
+               
          />
 
         <Image x:Name="HolkunImage"
