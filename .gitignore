@@ -339,3 +339,5 @@ ASALocalRun/
 # BeatPulse healthcheck temp database
 healthchecksdb
 .vs/MirrorPet/DesignTimeBuild/.dtbcache
+*.csproj
+MirrorPet - Curtis' Stuff/mirrorPet/mirrorPet.Android/Resources/Resource.designer.cs

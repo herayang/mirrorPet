@@ -15,28 +15,38 @@ namespace mirrorPet
     {
         double calorieGoal = 2000;
         double calorieCount;
+        static Dictionary<int, object> calorieData =
+              new Dictionary<int, object>();
+
         public MainPage()
         {
             InitializeComponent();
             calorieCount = 0;
         }
 
-
-
+        /* Takes in the calories and applies it to the progress bar? -Curtis
+         */
         private void Button_Clicked(object sender, EventArgs e)
         {
-            OnAppearing();
             var temp = CaloriesIntake.Text;
             Double calInput = Convert.ToDouble(temp);
             calInput /= calorieGoal;
             calorieCount += calInput;
             progressBar.ProgressTo(calorieCount, 900, Easing.Linear);
             CaloriesIntake.Text = string.Empty;
+
+            SaveGame();
+        }
+
+        /* Save stuff.
+         */
+        void SaveGame()
+        {
+            //calorieData.Add()
         }
 
         private void SetGoal(object sender, EventArgs args)
         {
-            OnAppearing();
             calorieGoal = Convert.ToDouble(Goal.Text);
         }
     }
