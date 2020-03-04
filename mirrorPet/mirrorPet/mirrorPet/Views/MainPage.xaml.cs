@@ -13,7 +13,7 @@ namespace mirrorPet
 	[DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
-        double calorieGoal = 2000;
+        double calorieGoal = 1;
         double calorieCount;
         public MainPage()
         {
@@ -25,7 +25,6 @@ namespace mirrorPet
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            OnAppearing();
             var temp = CaloriesIntake.Text;
             Double calInput = Convert.ToDouble(temp);
             calInput /= calorieGoal;
@@ -36,8 +35,22 @@ namespace mirrorPet
 
         private void SetGoal(object sender, EventArgs args)
         {
-            OnAppearing();
             calorieGoal = Convert.ToDouble(Goal.Text);
+            OnAppearing();
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            
+            Device.BeginInvokeOnMainThread(async () =>
+            {
+                if (calorieGoal < 10)
+                {
+                    await System.Threading.Tasks.Task.Delay(250);
+                    Goal.Focus();
+                }
+            });
         }
     }
 }

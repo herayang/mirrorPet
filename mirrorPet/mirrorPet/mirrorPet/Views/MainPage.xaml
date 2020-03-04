@@ -44,9 +44,8 @@
                Keyboard="Numeric"
                MaxLength="4"
                Grid.Row="1"
-               Completed="SetGoal"
-               
-         />
+               Completed="SetGoal">
+        </Entry>
 
         <Image x:Name="HolkunImage"
             Source="Holdkun_Default.png" 
