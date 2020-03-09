@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -8,49 +9,84 @@ using Xamarin.Forms;
 
 namespace mirrorPet
 {
-	// Learn more about making custom code visible in the Xamarin.Forms previewer
-	// by visiting https://aka.ms/xamarinforms-previewer
-	[DesignTimeVisible(false)]
+    // Learn more about making custom code visible in the Xamarin.Forms previewer
+    // by visiting https://aka.ms/xamarinforms-previewer
+    [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
-        double calorieGoal = 1;
-        double calorieCount;
+        double calorieGoal;
+        double caloriePercentage;
+        String dataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/savedText.txt";
+
+        /* Loads calorieCount and calorieGoal from the text file by:
+         * Getting the text from the file,
+         * splitting the text into substrings,
+         * converting those substrings into doubles, and applying the data.
+         * 
+         * Resets calorieCount if it's been a day.
+         */
         public MainPage()
         {
             InitializeComponent();
-            calorieCount = 0;
+            String dataText = File.ReadAllText(dataPath);
+            if (dataText == null)
+                SetGoalandText(2000);
+            else
+            {
+                string[] subStrings = dataText.Split('\n');
+
+                SetGoalandText(Convert.ToDouble(subStrings[0]));
+                if (subStrings[2] == DateTime.Now.Day.ToString())
+                    caloriePercentage = Convert.ToDouble(subStrings[1]);
+                else
+                    LocalSave(0);
+                UpdateProgressBar();
+
+            }
         }
 
-
-
-        private void Button_Clicked(object sender, EventArgs e)
+        void SetGoalandText(double goal)
         {
-            var temp = CaloriesIntake.Text;
-            Double calInput = Convert.ToDouble(temp);
-            calInput /= calorieGoal;
-            calorieCount += calInput;
-            progressBar.ProgressTo(calorieCount, 900, Easing.Linear);
-            CaloriesIntake.Text = string.Empty;
+            calorieGoal = goal;
+            Goal.Text = goal.ToString();
         }
 
-        private void SetGoal(object sender, EventArgs args)
+        /* Brings in new calories, makes sure it's a percentage, and applies it to the progress bar.
+         * Also makes sure the text is empty after the button is pressed and saves the data.
+         */
+        void CaloriesEntered(object sender, EventArgs e)
+        {
+            Double calInput = Convert.ToDouble(CaloriesIntake.Text);
+            calInput /= calorieGoal;
+            caloriePercentage += calInput;
+            UpdateProgressBar();
+
+            CaloriesIntake.Text = string.Empty;
+
+            LocalSave(caloriePercentage);
+        }
+
+        /* Calculates what the percentage of completion is.
+         * and applies progress to the bar.
+         */
+        void UpdateProgressBar()
+        {
+            progressBar.ProgressTo(caloriePercentage, 900, Easing.Linear);
+        }
+
+        /* Saves data to a text file.
+         */
+        void LocalSave(double newPercentage)
+        {
+            File.WriteAllText(dataPath,
+                calorieGoal.ToString() + '\n' +
+                newPercentage.ToString() + '\n' +
+                DateTime.Now.Day);
+        }
+
+        void SetGoal(object sender, EventArgs args)
         {
             calorieGoal = Convert.ToDouble(Goal.Text);
-            OnAppearing();
-        }
-
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-            
-            Device.BeginInvokeOnMainThread(async () =>
-            {
-                if (calorieGoal < 10)
-                {
-                    await System.Threading.Tasks.Task.Delay(250);
-                    Goal.Focus();
-                }
-            });
         }
     }
 }
