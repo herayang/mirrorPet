@@ -53,6 +53,16 @@
               HorizontalOptions="Center"
                
         />
+        <Entry x:Name="PetName"
+               Grid.Row="0"
+               Placeholder="Pet Name"
+               HorizontalTextAlignment="Center"
+               HorizontalOptions="Center"
+               VerticalOptions="End"
+               MaxLength="16"
+        >
+            
+        </Entry>
              <!--<Image WidthRequest="80"  Source="{Binding Category}" HeightRequest="80">
                                 <Image.Triggers>
                                     <DataTrigger TargetType="Image" Binding="{Binding Source={x:Reference CaloriesIntake}" Value="2000">
