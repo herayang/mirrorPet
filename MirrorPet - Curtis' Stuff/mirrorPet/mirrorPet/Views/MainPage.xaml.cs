@@ -14,38 +14,77 @@ namespace mirrorPet
 	[DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
-        double calorieGoal = 2000;
-        double calorieCount;
+        double calorieGoal;
+        double caloriePercentage;
+        String dataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/savedText.txt";
 
+        /* Loads calorieCount and calorieGoal from the text file by:
+         * Getting the text from the file,
+         * splitting the text into substrings,
+         * converting those substrings into doubles, and applying the data.
+         * 
+         * Resets calorieCount if it's been a day.
+         */
         public MainPage()
         {
             InitializeComponent();
-            calorieCount = Convert.ToDouble(File.ReadAllText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/savedText.txt"));
+            String dataText = File.ReadAllText(dataPath);
+            if (dataText == null)
+                SetGoalandText(2000);
+            else
+            {
+                string[] subStrings = dataText.Split('\n');
+
+                SetGoalandText(Convert.ToDouble(subStrings[0]));
+                if (subStrings[2] == DateTime.Now.Day.ToString())
+                    caloriePercentage = Convert.ToDouble(subStrings[1]);
+                else
+                    LocalSave(0);
+                UpdateProgressBar();
+                
+            }
         }
 
-        /* Takes in the calories and applies it to the progress bar? -Curtis
-         */
-        private void Button_Clicked(object sender, EventArgs e)
+        void SetGoalandText(double goal)
         {
-            var temp = CaloriesIntake.Text;
-            Double calInput = Convert.ToDouble(temp);
+            calorieGoal = goal;
+            Goal.Text = goal.ToString();
+        }
+
+        /* Brings in new calories, makes sure it's a percentage, and applies it to the progress bar.
+         * Also makes sure the text is empty after the button is pressed and saves the data.
+         */
+        void CaloriesEntered(object sender, EventArgs e)
+        {
+            Double calInput = Convert.ToDouble(CaloriesIntake.Text);
             calInput /= calorieGoal;
-            calorieCount += calInput;
-            progressBar.ProgressTo(calorieCount, 900, Easing.Linear);
+            caloriePercentage += calInput;
+            UpdateProgressBar();
+
             CaloriesIntake.Text = string.Empty;
 
-            LocalSave();
+            LocalSave(caloriePercentage);
+        }
+
+        /* Calculates what the percentage of completion is.
+         * and applies progress to the bar.
+         */
+        void UpdateProgressBar()
+        {
+            progressBar.ProgressTo(caloriePercentage, 900, Easing.Linear);
         }
 
         /* Saves data to a text file.
          */
-        void LocalSave()
+        void LocalSave(double newPercentage)
         {
-            File.WriteAllText(System.Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData) + "/savedText.txt", 
-                calorieCount.ToString());
+            File.WriteAllText(dataPath, 
+                calorieGoal.ToString()   + '\n' + 
+                newPercentage.ToString() + '\n' + 
+                DateTime.Now.Day);
         }
 
-        private void SetGoal(object sender, EventArgs args)
+        void SetGoal(object sender, EventArgs args)
         {
             calorieGoal = Convert.ToDouble(Goal.Text);
         }
