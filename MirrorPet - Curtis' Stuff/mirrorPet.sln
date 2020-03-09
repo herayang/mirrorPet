@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mirrorPet.Android", "mirror
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mirrorPet.iOS", "mirrorPet\mirrorPet.iOS\mirrorPet.iOS.csproj", "{8B47A3D5-3776-485C-BCCF-B98AD84B3C44}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mirrorPet", "mirrorPet\mirrorPet\mirrorPet.csproj", "{CA36CB01-C702-43DD-B33F-5BF49312B688}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mirrorPet", "mirrorPet\mirrorPet\mirrorPet.csproj", "{CA36CB01-C702-43DD-B33F-5BF49312B688}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -15,13 +16,11 @@ namespace mirrorPet
     {
         double calorieGoal = 2000;
         double calorieCount;
-        static Dictionary<int, object> calorieData =
-              new Dictionary<int, object>();
 
         public MainPage()
         {
             InitializeComponent();
-            calorieCount = 0;
+            calorieCount = Convert.ToDouble(File.ReadAllText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/savedText.txt"));
         }
 
         /* Takes in the calories and applies it to the progress bar? -Curtis
@@ -35,14 +34,15 @@ namespace mirrorPet
             progressBar.ProgressTo(calorieCount, 900, Easing.Linear);
             CaloriesIntake.Text = string.Empty;
 
-            SaveGame();
+            LocalSave();
         }
 
-        /* Save stuff.
+        /* Saves data to a text file.
          */
-        void SaveGame()
+        void LocalSave()
         {
-            //calorieData.Add()
+            File.WriteAllText(System.Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData) + "/savedText.txt", 
+                calorieCount.ToString());
         }
 
         private void SetGoal(object sender, EventArgs args)
