@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
+//This is the main scripting script.
 namespace mirrorPet
 {
     // Learn more about making custom code visible in the Xamarin.Forms previewer
@@ -93,9 +94,29 @@ namespace mirrorPet
                 DateTime.Now.Day);
         }
 
+        /* When the goal has been entered, save it in the script.
+         */
         void SetGoal(object sender, EventArgs args)
         {
             calorieGoal = Convert.ToDouble(Goal.Text);
+            OnAppearing();
+        }
+
+
+        /* If the goal has not been set or is too small make the player enter a goal.
+         */
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            Device.BeginInvokeOnMainThread(async () =>
+            {
+                if (calorieGoal < 10)
+                {
+                    await System.Threading.Tasks.Task.Delay(250);
+                    Goal.Focus();
+                }
+            });
         }
     }
 }

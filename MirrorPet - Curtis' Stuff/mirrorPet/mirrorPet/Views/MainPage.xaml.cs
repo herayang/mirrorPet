@@ -7,14 +7,16 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
+
+//This is in CURTIS' STUFF
 namespace mirrorPet
 {
-	// Learn more about making custom code visible in the Xamarin.Forms previewer
-	// by visiting https://aka.ms/xamarinforms-previewer
-	[DesignTimeVisible(false)]
+    // Learn more about making custom code visible in the Xamarin.Forms previewer
+    // by visiting https://aka.ms/xamarinforms-previewer
+    [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
-        double calorieGoal;
+        double calorieGoal = 1;
         double caloriePercentage;
         String dataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/savedText.txt";
 
@@ -28,20 +30,27 @@ namespace mirrorPet
         public MainPage()
         {
             InitializeComponent();
-            String dataText = File.ReadAllText(dataPath);
-            if (dataText == "")
-                SetGoalandText(2000);
-            else
+            try
             {
-                string[] subStrings = dataText.Split('\n');
-                SetGoalandText(Convert.ToDouble(subStrings[0]));
-
-                if (subStrings[2] == DateTime.Now.Day.ToString())
-                    caloriePercentage = Convert.ToDouble(subStrings[1]);
+                String dataText = File.ReadAllText(dataPath);
+                if (dataText == "")
+                    SetGoalandText(2000);
                 else
-                    LocalSave(0);
-                UpdateProgressBar();
-                
+                {
+                    string[] subStrings = dataText.Split('\n');
+                    SetGoalandText(Convert.ToDouble(subStrings[0]));
+
+                    if (subStrings[2] == DateTime.Now.Day.ToString())
+                        caloriePercentage = Convert.ToDouble(subStrings[1]);
+                    else
+                        LocalSave(0);
+                    UpdateProgressBar();
+
+                }
+            }
+            catch
+            {
+                LocalSave(0);
             }
         }
 
@@ -78,15 +87,32 @@ namespace mirrorPet
          */
         void LocalSave(double newPercentage)
         {
-            File.WriteAllText(dataPath, 
-                calorieGoal.ToString()   + '\n' + 
-                newPercentage.ToString() + '\n' + 
+            File.WriteAllText(dataPath,
+                calorieGoal.ToString() + '\n' +
+                newPercentage.ToString() + '\n' +
                 DateTime.Now.Day);
         }
 
         void SetGoal(object sender, EventArgs args)
         {
             calorieGoal = Convert.ToDouble(Goal.Text);
+            OnAppearing();
+        }
+
+        /* If the goal has not been set or is too small make the player enter a goal.
+         */
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            Device.BeginInvokeOnMainThread(async () =>
+            {
+                if (calorieGoal < 10)
+                {
+                    await System.Threading.Tasks.Task.Delay(250);
+                    Goal.Focus();
+                }
+            });
         }
     }
 }

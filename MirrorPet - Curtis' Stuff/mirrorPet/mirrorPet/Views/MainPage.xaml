@@ -36,7 +36,7 @@
                Grid.Row="1"     
          />
 
-        <Button Click="PushButton" Content="AdvanceDay" HorizontalAlignment="Left" Margin="116,329,0,0" VerticalAlignment="Top" Width="97" Height="30"/>
+        <!--<Button Text="Advance Day"  Click="PushButton" Content="AdvanceDay" HorizontalAlignment="Left" Margin="116,329,0,0" VerticalAlignment="Top" Width="97" Height="30"/>-->
 
         <Entry x:Name="Goal"
                
