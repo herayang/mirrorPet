@@ -29,13 +29,13 @@ namespace mirrorPet
         {
             InitializeComponent();
             String dataText = File.ReadAllText(dataPath);
-            if (dataText == null)
+            if (dataText == "")
                 SetGoalandText(2000);
             else
             {
                 string[] subStrings = dataText.Split('\n');
-
                 SetGoalandText(Convert.ToDouble(subStrings[0]));
+
                 if (subStrings[2] == DateTime.Now.Day.ToString())
                     caloriePercentage = Convert.ToDouble(subStrings[1]);
                 else

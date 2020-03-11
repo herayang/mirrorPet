@@ -28,21 +28,30 @@ namespace mirrorPet
         public MainPage()
         {
             InitializeComponent();
-            String dataText = File.ReadAllText(dataPath);
-            if (dataText == null)
-                SetGoalandText(2000);
-            else
+            try
             {
-                string[] subStrings = dataText.Split('\n');
-
-                SetGoalandText(Convert.ToDouble(subStrings[0]));
-                if (subStrings[2] == DateTime.Now.Day.ToString())
-                    caloriePercentage = Convert.ToDouble(subStrings[1]);
+                String dataText = File.ReadAllText(dataPath);
+                if (dataText == null)
+                    SetGoalandText(2000);
                 else
-                    LocalSave(0);
-                UpdateProgressBar();
+                {
+                    string[] subStrings = dataText.Split('\n');
 
+                    SetGoalandText(Convert.ToDouble(subStrings[0]));
+                    if (subStrings[2] == DateTime.Now.Day.ToString())
+                        caloriePercentage = Convert.ToDouble(subStrings[1]);
+                    else
+                        LocalSave(0);
+                    UpdateProgressBar();
+
+                }
             }
+            catch
+            {
+                SetGoalandText(2000);
+                LocalSave(0);
+            }
+            
         }
 
         void SetGoalandText(double goal)
