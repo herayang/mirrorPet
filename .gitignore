@@ -346,3 +346,5 @@ MirrorPet - Curtis' Stuff/mirrorPet/mirrorPet/mirrorPet.csproj
 MirrorPet - Curtis' Stuff/mirrorPet/mirrorPet.Android/Resources/Resource.designer.cs
 MirrorPet - Curtis' Stuff/mirrorPet/mirrorPet.Android/Resources/Resource.designer.cs
 MirrorPet - Curtis' Stuff/mirrorPet/mirrorPet.Android/Resources/Resource.designer.cs
+mirrorPet/mirrorPet/mirrorPet/mirrorPet.csproj
+*.csproj
