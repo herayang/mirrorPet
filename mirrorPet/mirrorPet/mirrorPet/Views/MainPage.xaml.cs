@@ -113,8 +113,8 @@ namespace mirrorPet
             {
                 if (calorieGoal < 10)
                 {
-                    await System.Threading.Tasks.Task.Delay(250);
-                    Goal.Focus();
+                    //await System.Threading.Tasks.Task.Delay(250);
+                    await Navigation.PushModalAsync(new Views.PetChoice());
                 }
             });
         }

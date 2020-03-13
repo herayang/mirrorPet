@@ -5,11 +5,47 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="mirrorPet.Views.PetChoice">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="2*" />
+        <RowDefinition Height="1*" />
+    </Grid.RowDefinitions>
+        <Grid Grid.Row="0"
+          BackgroundColor="BlueViolet"
+          />
+        <Grid Grid.Row="1"
+              BackgroundColor="Beige"
+              />
+
+        <CollectionView x:Name="PetChoices"
+                        Grid.Row="0">
+            <!--<CollectionView.ItemsSource>
+                
+            </CollectionView.ItemsSource>-->
+        </CollectionView>
+
+        <Entry x:Name="Goal"
+               
+               Placeholder="Enter goal for calories"
+               HorizontalTextAlignment="Center"
+               VerticalOptions="Start"
+               HorizontalOptions="Center"
+               Keyboard="Numeric"
+               MaxLength="4"
+               Grid.Row="1"
+               >
+        </Entry>
+
+        <Button x:Name="FinishChoices"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Grid.Row="1"
+                Text="Done"
+                BackgroundColor="BlueViolet"
+                
+                >
+            
+        </Button>
+        
+    </Grid>
 </ContentPage>
