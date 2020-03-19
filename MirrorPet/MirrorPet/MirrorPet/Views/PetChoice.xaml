@@ -17,11 +17,29 @@
               BackgroundColor="Beige"
               />
 
-        <CollectionView x:Name="PetChoices"
-                        Grid.Row="0">
-            <!--<CollectionView.ItemsSource>
-                
-            </CollectionView.ItemsSource>-->
+        <CollectionView x:Name="PetView"
+                        Grid.Row="0"
+                        ItemsSource="{Binding PetChoices}"
+                        ItemsLayout="VerticalList"
+                        >
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Image
+                            Grid.Column="1"
+                            Source="{Binding ImageUrl}"
+                            />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
         </CollectionView>
 
         <Entry x:Name="Goal"
@@ -42,7 +60,7 @@
                 Grid.Row="1"
                 Text="Done"
                 BackgroundColor="BlueViolet"
-                
+                Clicked="CompletePage"
                 >
             
         </Button>

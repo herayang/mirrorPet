@@ -15,7 +15,6 @@ namespace mirrorPet
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
-        double calorieGoal;
         double caloriePercentage;
         String dataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/savedText.txt";
 
@@ -57,7 +56,7 @@ namespace mirrorPet
 
         void SetGoalandText(double goal)
         {
-            calorieGoal = goal;
+            App.calorieGoal = goal;
             Goal.Text = goal.ToString();
         }
 
@@ -67,7 +66,7 @@ namespace mirrorPet
         void CaloriesEntered(object sender, EventArgs e)
         {
             Double calInput = Convert.ToDouble(CaloriesIntake.Text);
-            calInput /= calorieGoal;
+            calInput /= App.calorieGoal;
             caloriePercentage += calInput;
             UpdateProgressBar();
 
@@ -89,7 +88,7 @@ namespace mirrorPet
         void LocalSave(double newPercentage)
         {
             File.WriteAllText(dataPath,
-                calorieGoal.ToString() + '\n' +
+                App.calorieGoal.ToString() + '\n' +
                 newPercentage.ToString() + '\n' +
                 DateTime.Now.Day);
         }
@@ -98,7 +97,7 @@ namespace mirrorPet
          */
         void SetGoal(object sender, EventArgs args)
         {
-            calorieGoal = Convert.ToDouble(Goal.Text);
+            App.calorieGoal = Convert.ToDouble(Goal.Text);
             OnAppearing();
         }
 
@@ -111,11 +110,12 @@ namespace mirrorPet
 
             Device.BeginInvokeOnMainThread(async () =>
             {
-                if (calorieGoal < 10)
+                if (App.calorieGoal < 10)
                 {
                     //await System.Threading.Tasks.Task.Delay(250);
                     await Navigation.PushModalAsync(new Views.PetChoice());
                 }
+                SetGoalandText(App.calorieGoal);
             });
         }
     }
