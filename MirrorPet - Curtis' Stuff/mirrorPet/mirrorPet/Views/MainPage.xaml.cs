@@ -33,10 +33,7 @@ namespace mirrorPet
             try
             {
                 String dataText = File.ReadAllText(dataPath);
-                if (dataText == "")
-                    SetGoalandText(2000);
-                else
-                {
+
                     string[] subStrings = dataText.Split('\n');
                     SetGoalandText(Convert.ToDouble(subStrings[0]));
 
@@ -45,12 +42,11 @@ namespace mirrorPet
                     else
                         LocalSave(0);
                     UpdateProgressBar();
-
-                }
             }
             catch
             {
-                LocalSave(0);
+                OnAppearing();
+                LocalSave(2);
             }
         }
 
@@ -96,6 +92,7 @@ namespace mirrorPet
         void SetGoal(object sender, EventArgs args)
         {
             calorieGoal = Convert.ToDouble(Goal.Text);
+            SetGoalandText(Convert.ToDouble(Goal.Text));
             OnAppearing();
         }
 
@@ -109,10 +106,16 @@ namespace mirrorPet
             {
                 if (calorieGoal < 10)
                 {
+
                     await System.Threading.Tasks.Task.Delay(250);
                     Goal.Focus();
                 }
             });
         }
+
+        //private void Advance_Button(object sender, EventArgs args)
+        //{
+        //    Goal.Text = "1337";
+        //}
     }
 }
