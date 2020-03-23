@@ -111,6 +111,7 @@ namespace mirrorPet
                     await Navigation.PushModalAsync(new Views.PetChoice());
                 }
                 SetGoalandText(App.calorieGoal);
+                LocalSave(caloriePercentage);
             });
         }
     }
