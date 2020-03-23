@@ -31,10 +31,7 @@ namespace mirrorPet
             try
             {
                 String dataText = File.ReadAllText(dataPath);
-                if (dataText == null)
-                    SetGoalandText(2000);
-                else
-                {
+
                     string[] subStrings = dataText.Split('\n');
 
                     SetGoalandText(Convert.ToDouble(subStrings[0]));
@@ -43,12 +40,9 @@ namespace mirrorPet
                     else
                         LocalSave(0);
                     UpdateProgressBar();
-
-                }
             }
             catch
             {
-                SetGoalandText(2000);
                 LocalSave(0);
             }
             
@@ -99,6 +93,7 @@ namespace mirrorPet
         {
             App.calorieGoal = Convert.ToDouble(Goal.Text);
             OnAppearing();
+            SetGoalandText(Convert.ToDouble(Goal.Text));
         }
 
 
