@@ -1,4 +1,5 @@
 ﻿using System;
+using mirrorPet.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,7 @@ namespace mirrorPet
 		{
 			InitializeComponent();
 
-			MainPage = new MainPage();
+			MainPage = new NavigationPage(new GoalPage());
 		}
 
 		protected override void OnStart()
