@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using mirrorPet.Models;
+using mirrorPet.Views;
 using Xamarin.Forms;
 
 namespace mirrorPet.ViewModels
