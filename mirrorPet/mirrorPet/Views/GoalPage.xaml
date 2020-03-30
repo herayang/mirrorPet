@@ -9,30 +9,33 @@
 
     <ContentPage.BindingContext>
         <goalVM:GoalViewModel/>
-     
+
     </ContentPage.BindingContext>
 
 
     <ContentPage.Resources>
         <ResourceDictionary>
-           <valueConverter:StringToImageConverter x:Key="stringToImagePath" Assembly="mirrorPet.Assets.Images"/>
+            <valueConverter:StringToImageConverter x:Key="stringToImagePath" Assembly="mirrorPet.Assets.Images"/>
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <Grid>
-    <Grid.RowDefinitions>
-        <RowDefinition Height="1*" />
-        <RowDefinition Height="1*" />
-    </Grid.RowDefinitions>
-        <Grid Grid.Row="0"
+
+    <ScrollView Orientation="Vertical"  HeightRequest="1400">
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0"
 
           BackgroundColor="{StaticResource blueVioletColor}"
           />
-        <Grid Grid.Row="1"
+            <Grid Grid.Row="1"
               BackgroundColor="{StaticResource beigeColor}"
               />
 
-        <!--<CollectionView x:Name="PetView"
+            <!--<CollectionView x:Name="PetView"
                         Grid.Row="0"
                         ItemsSource="{Binding Pets}"
                         
@@ -64,7 +67,7 @@
             </CollectionView.ItemTemplate>
         </CollectionView>-->
 
-        <Entry x:Name="GoalName"
+            <Entry x:Name="GoalName"
                
                Placeholder="Enter Goal Name"
                HorizontalTextAlignment="Center"
@@ -75,9 +78,9 @@
                Grid.Row="1"
                Margin="0,8"
                >
-        </Entry>
-        
-        <Entry x:Name="GoalTarget"
+            </Entry>
+
+            <Entry x:Name="GoalTarget"
                
                Placeholder="Enter Goal Target"
                HorizontalTextAlignment="Center"
@@ -88,9 +91,9 @@
                Grid.Row="1"
                Margin="0,60"
                >
-        </Entry>
+            </Entry>
 
-        <Entry x:Name="PetName"
+            <Entry x:Name="PetName"
                
                Placeholder="Enter Pet Name"
                HorizontalTextAlignment="Center"
@@ -101,9 +104,9 @@
                Grid.Row="1"
                Margin="0,114"
                >
-        </Entry>
+            </Entry>
 
-        <Button x:Name="SaveChoices"
+            <Button x:Name="SaveChoices"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
                 Grid.Row="1"
@@ -111,8 +114,9 @@
                 TranslationY="58"
                 FontSize="Large"
                 Command="{Binding SaveGoalCommand}"
-                > 
-        </Button>
-        
-    </Grid>
+                >
+            </Button>
+
+        </Grid>
+    </ScrollView>
 </ContentPage>
